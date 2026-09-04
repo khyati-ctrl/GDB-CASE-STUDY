@@ -2,7 +2,6 @@ package org.example;
 
 public class Account {
 
-    // Private fields
     private int accountNumber;
     private String name;
     private int age;
@@ -10,7 +9,6 @@ public class Account {
     private String accountType;
     private String status;
 
-    // Constructor
     public Account(int accountNumber, String name, int age,
                    double initialBalance, String accountType) {
         this.accountNumber = accountNumber;
@@ -21,7 +19,6 @@ public class Account {
         this.status = "Active";
     }
 
-    // Deposit money
     public boolean deposit(double amount) {
         if (amount <= 0) {
             return false;
@@ -30,7 +27,6 @@ public class Account {
         return true;
     }
 
-    // Withdraw money
     public boolean withdraw(double amount) {
         if (amount <= 0 || amount > balance) {
             return false;
@@ -39,7 +35,6 @@ public class Account {
         return true;
     }
 
-    // Getter methods
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -64,7 +59,6 @@ public class Account {
         return status;
     }
 
-    // Setter methods
     public void setName(String name) {
         this.name = name;
     }
